@@ -9,13 +9,13 @@ public class Main {
     public static void main(String[] args) {
         try (Connection conexion = ConexionBD.obtenerConexion()) {
             // Insertar un nuevo registro
-            CRUDExample.insertarRegistro(conexion, "Juan", 25);
+            // CRUDExample.insertarRegistro(conexion, "Juan", 25);
 
             // Obtener todos los registros
-            CRUDExample.obtenerRegistros(conexion);
+            // CRUDExample.obtenerRegistros(conexion);
 
             // Actualizar un registro
-            // CRUDExample.actualizarRegistro(conexion, "Juan", 26);
+            CRUDExample.actualizarRegistro(conexion, "Juan", 40);
 
             // Eliminar un registro
             // CRUDExample.eliminarRegistro(conexion, "Juan");
