@@ -1,27 +1,26 @@
 package com.example;
 import java.sql.Connection;
 import java.sql.SQLException;
-// import com.example.ConexionBD;
-// import com.example.CRUDExample;
+
 
 public class Main {
 
     public static void main(String[] args) {
         try (Connection conexion = ConexionBD.obtenerConexion()) {
             // Insertar un nuevo registro
-            // CRUDExample.insertarRegistro(conexion, "Juan", 25);
+            // CRUD.insertarRegistro(conexion, "Daniel", 25);
 
             // Obtener todos los registros
-            // CRUDExample.obtenerRegistros(conexion);
+            // CRUD.obtenerRegistros(conexion);
 
             // Actualizar un registro
-            CRUDExample.actualizarRegistro(conexion, "Juan", 40);
+            // CRUD.actualizarRegistro(conexion, "Sair", 30);
 
             // Eliminar un registro
-            // CRUDExample.eliminarRegistro(conexion, "Juan");
+            // CRUD.eliminarRegistro(conexion, "Sair");
 
             // Obtener todos los registros después de eliminar uno
-            // CRUDExample.obtenerRegistros(conexion);
+            // CRUD.obtenerRegistros(conexion);
 
         } catch (SQLException e) {
             System.out.println("Error de SQL: " + e.getMessage());

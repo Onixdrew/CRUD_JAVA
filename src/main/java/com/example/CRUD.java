@@ -1,11 +1,11 @@
 package com.example;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.PreparedStatement; //se utiliza para ejecutar consultas parametrizadas.
+import java.sql.ResultSet; // proporciona métodos para manejar los resultados de las consultas SQL.
 import java.sql.SQLException;
 
-public class CRUDExample {
+public class CRUD {
 
     // Método para insertar un nuevo registro en la base de datos
     public static void insertarRegistro(Connection conexion, String nombre, int edad) throws SQLException {
