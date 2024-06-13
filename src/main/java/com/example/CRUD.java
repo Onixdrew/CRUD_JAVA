@@ -14,6 +14,7 @@ public class CRUD {
             statement.setString(1, nombre);
             statement.setInt(2, edad);
             statement.executeUpdate();
+            //  El método executeUpdate() se utiliza para ejecutar consultas de actualización, como inserciones, actualizaciones o eliminaciones.
             System.out.println("Registro insertado con éxito.");
         }
     }
@@ -22,12 +23,13 @@ public class CRUD {
     public static void obtenerRegistros(Connection conexion) throws SQLException {
         String query = "SELECT * FROM personas";
         try (PreparedStatement statement = conexion.prepareStatement(query);
-             ResultSet resultSet = statement.executeQuery()) {
-            while (resultSet.next()) {
-                String nombre = resultSet.getString("nombre");
-                int edad = resultSet.getInt("edad");
-                System.out.println("Nombre: " + nombre + ", Edad: " + edad);
-            }
+        // Se ejecuta la consulta SQL utilizando el método executeQuery(), que devuelve un objeto ResultSet que contiene los resultados de la consulta.
+            ResultSet resultSet = statement.executeQuery()){
+                while (resultSet.next()) {
+                    String nombre = resultSet.getString("nombre");
+                    int edad = resultSet.getInt("edad");
+                    System.out.println("Nombre: " + nombre + ", Edad: " + edad);
+                }
         }
     }
 

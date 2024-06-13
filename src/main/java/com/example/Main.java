@@ -11,7 +11,7 @@ public class Main {
             // CRUD.insertarRegistro(conexion, "Daniel", 25);
 
             // Obtener todos los registros
-            // CRUD.obtenerRegistros(conexion);
+            CRUD.obtenerRegistros(conexion);
 
             // Actualizar un registro
             // CRUD.actualizarRegistro(conexion, "Sair", 30);
